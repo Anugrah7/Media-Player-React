@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 const Home = () => {
+  const [deleteResponseFromView,setDeleteResponseFromView] = useState("")
   const [deleteResponseFromCategory,setDeleteResponseFromCategory] = useState("")
   const [addResponseFromHome,setAddResponseFromHome] = useState("")
 
@@ -21,8 +22,9 @@ const Home = () => {
           <View deleteResponseFromCategory={deleteResponseFromCategory} addResponseFromHome = {addResponseFromHome}/>
         </div>
         <div className="col-lg-6">
-          <Category setDeleteResponseFromCategory = {setDeleteResponseFromCategory}/>
+          <Category setDeleteResponseFromView = {setDeleteResponseFromView} addResponseFromCategory = {deleteResponseFromCategory}/>
         </div>
+       
       </div>
      
     </div>
